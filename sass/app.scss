@@ -1,0 +1,125 @@
+@charset "utf-8";
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+$color-1: #aebbb2;
+$color-2: #e2e5da;
+$color-3: #c9c8b6;
+$color-4: #f3f0e1;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $color-1;
+$link: $color-2;
+$info: $color-3;
+$light: $color-4;
+//$widescreen-enabled: false;
+//$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: #fefefe;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/image.sass";
+@import "../node_modules/bulma/sass/elements/notification.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/components/message.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/bulma/sass/helpers/spacing.sass";
+@import "../node_modules/bulma/sass/helpers/typography.sass";
+
+p {
+    margin-bottom: 20px;
+}
+
+.card footer.card-footer  {
+    border-top: none;
+    padding: 10px 0;
+}
+
+.card footer.card-footer .button  {
+    margin-left: 20px;
+}
+
+
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+
+.card .card-content {
+  @include from($tablet-breakpoint) {
+    height: 350px;
+  }
+  @include from($desktop-breakpoint) {
+    height: 280px;
+  }
+}
+.card.is-light {
+    background-color: $light;
+    background-image: url(../images/mandala-light.svg);
+    background-repeat: no-repeat;
+    background-size: 1500px 1500px;
+    background-position: bottom left -200px;
+}
+
+.card.is-primary {
+    background-color: $primary;
+    background-image: url(../images/mandala-primary.svg);
+    background-repeat: no-repeat;
+    background-size: 1500px 1500px;
+    background-position: top -200px right -100px;
+}
+
+.card.is-info {
+    background-color: $info;
+    background-image: url(../images/mandala-info.svg);
+    background-repeat: no-repeat;
+    background-size: 2000px 2000px;
+    background-position: bottom -150px right -150px;
+}
+
+.card.is-link {
+    background-color: $link;
+    background-image: url(../images/mandala-link.svg);
+    background-repeat: no-repeat;
+    background-size: 2000px 2000px;
+    background-position: bottom -150px left -150px;
+}
+
+.hero.is-light {
+    background-image: url(../images/mandala-light.svg);
+    background-repeat: no-repeat;
+    background-size: 1000px 1000px;
+    background-position: top 20px right -300px;
+}
+
+.hero.is-primary {
+    background-image: url(../images/mandala-primary.svg);
+    background-repeat: no-repeat;
+    background-size: 1000px 1000px;
+    background-position: top 20px left -300px;
+}
+
+.hero.is-primary .hero-body,
+.hero.is-primary .hero-body h2.title {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.hero.is-info {
+    background-image: url(../images/mandala-info.svg);
+    background-repeat: no-repeat;
+    background-size: 1000px 1000px;
+    background-position: top 20px left -300px;
+}

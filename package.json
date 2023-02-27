@@ -1,0 +1,19 @@
+{
+  "name": "eventyryoga",
+  "version": "1.0.0",
+  "description": "eventyryoga.dk",
+  "main": "index.html",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/app.scss css/app.css",
+    "css-watch": "npm run css-build -- --watch",
+    "dev-server": "web-dev-server --node-resolve --open --watch",
+    "start": "npm run css-watch & npm run dev-server"
+  },
+  "author": "Lars Diget",
+  "license": "MIT",
+  "devDependencies": {
+    "@web/dev-server": "^0.1.30",
+    "bulma": "^0.9.3",
+    "node-sass": "^7.0.1"
+  }
+}
