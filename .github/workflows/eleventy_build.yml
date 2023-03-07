@@ -9,12 +9,12 @@ jobs:
       - name: Build using node.ks
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '16.x'
       - run: npm install
       - run: npm run build --if-present
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
         env:
-          PUBLISH_DIR: _site 
+          PUBLISH_DIR: public 
           PUBLISH_BRANCH: gh-pages
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
