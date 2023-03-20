@@ -4,10 +4,10 @@
   "description": "eventyryoga.dk",
   "main": "index.html",
   "scripts": {
-    "css-build": "node-sass --omit-source-map-url src/sass/app.scss src/css/app.css",
-    "css-watch": "npm run css-build -- --watch",
+    "css-build": "sass src/sass:public/css",
+    "css-watch": "sass --watch src/sass:public/css",
     "dev-server": "web-dev-server --node-resolve --open --watch",
-    "build": "eleventy",
+    "build": "npm run css-build & eleventy",
     "start": "npm run css-watch & eleventy --serve"
   },
   "author": "Lars Diget",
@@ -16,6 +16,6 @@
     "@11ty/eleventy": "^2.0.0",
     "@web/dev-server": "^0.1.30",
     "bulma": "^0.9.3",
-    "node-sass": "^7.0.1"
+    "sass": "^1.59.3"
   }
 }
