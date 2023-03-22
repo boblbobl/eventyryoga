@@ -5,9 +5,17 @@ jobs:
   build_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
+
       - name: Build
-        uses: TartanLlama/actions-eleventy@master
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: npm ci
+
+      - run: npm run build
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
