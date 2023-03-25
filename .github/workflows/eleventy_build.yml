@@ -1,19 +1,22 @@
 name: Eleventy Build
 on: [push]
 
+env:
+  TEST: ${{ vars.TEST }}
 jobs:
   build_deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Print Vars
+        run: echo "env: $TEST"
+
       - uses: actions/checkout@v3
 
       - name: Build
         uses: actions/setup-node@v3
         with:
           node-version: 18
-        env:
-          TEST: ${{ vars.TEST }}
-
+            
       - run: npm ci
 
       - run: npm run build
