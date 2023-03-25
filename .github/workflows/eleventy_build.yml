@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Vars
-        run: echo "env: $TEST"
+      - run: echo "env: $TEST"
 
       - uses: actions/checkout@v3
 
