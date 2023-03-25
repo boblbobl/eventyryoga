@@ -11,6 +11,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+        env:
+          TEST: ${{ vars.TEST }}
 
       - run: npm ci
 
@@ -22,3 +24,4 @@ jobs:
           publish_dir: ./public 
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          cname: eventyryoga.dk
