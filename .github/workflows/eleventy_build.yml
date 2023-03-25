@@ -2,7 +2,8 @@ name: Eleventy Build
 on: [push]
 
 env:
-  TEST: "t"
+  TEST: t
+
 jobs:
   build_deploy:
     runs-on: ubuntu-latest
@@ -14,8 +15,6 @@ jobs:
         with:
           node-version: 18
             
-      - run: echo "env: $TEST"
-
       - run: npm ci
 
       - run: npm run build
