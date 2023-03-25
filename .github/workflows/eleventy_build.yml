@@ -7,9 +7,6 @@ jobs:
   build_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Vars
-      - run: echo "env: $TEST"
-
       - uses: actions/checkout@v3
 
       - name: Build
@@ -17,6 +14,8 @@ jobs:
         with:
           node-version: 18
             
+      - run: echo "env: $TEST"
+
       - run: npm ci
 
       - run: npm run build
