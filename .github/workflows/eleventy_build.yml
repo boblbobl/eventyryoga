@@ -2,7 +2,7 @@ name: Eleventy Build
 on: [push]
 
 env:
-  TEST: ${{ vars.TEST }}
+  TEST: ${{ secrets.TEST }}
 
 jobs:
   build_deploy:
