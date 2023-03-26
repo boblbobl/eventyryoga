@@ -2,7 +2,8 @@ name: Eleventy Build
 on: [push]
 
 env:
-  TEST: ${{ secrets.TEST }}
+  CTFL_SPACE: ${{ secrets.CTFL_SPACE }}
+  CTFL_ACCESSTOKEN: ${{ secrets.CTFL_ACCESSTOKEN }}
 
 jobs:
   build_deploy:
