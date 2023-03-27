@@ -1,0 +1,13 @@
+---
+pagination:
+    data: contentful-page
+    size: 1
+    alias: page
+    addAllPagesToCollections: true
+permalink: "{{ page.slug | slugify }}.html"
+tags: "page"
+layout: base.liquid
+eleventyComputed:
+  title: "{{ page.title}}"
+  subtitle: "{{ page.subtitle }}"
+---

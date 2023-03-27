@@ -16,6 +16,7 @@
     "@11ty/eleventy": "^2.0.0",
     "@web/dev-server": "^0.1.30",
     "bulma": "^0.9.3",
+    "contentful": "^9.3.5",
     "dotenv": "^16.0.3",
     "sass": "^1.59.3"
   }
