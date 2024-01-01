@@ -12,8 +12,7 @@ eleventyComputed:
   subtitle: "{{ page.subtitle }}"
 ---
 
-test
-{%- for component in page.content -%}
+{%- for component in page.content -%}  
   {% if component.sys.contentType.sys.id == "card" %}
     {% card component %}
   {% endif %}
