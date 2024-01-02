@@ -54,17 +54,28 @@ p {
     margin-left: 20px;
 }
 
-
-$tablet-breakpoint: 768px;
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 769px;
+$tablet-desktop-breakpoint: 850px;
 $desktop-breakpoint: 1024px;
+$wide-desktop-breakpoint: 1216px;
 
 .card .card-content {
-  @include from($tablet-breakpoint) {
-    height: 350px;
-  }
-  @include from($desktop-breakpoint) {
-    height: 280px;
-  }
+    @include until($mobile-breakpoint) {
+        height: 290px;
+    }
+    @include from($tablet-breakpoint) {
+        height: 440px;
+    }
+    @include from($tablet-desktop-breakpoint) {
+        height: 420px;
+    }
+    @include from($desktop-breakpoint) {
+        height: 400px;
+    }
+    @include from($wide-desktop-breakpoint) {
+        height: 280px;
+    }
 }
 .card.is-light {
     background-color: $light;

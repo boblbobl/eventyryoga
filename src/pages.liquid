@@ -13,7 +13,9 @@ eleventyComputed:
 ---
 
 {%- for component in page.content -%}  
-  {% if component.sys.contentType.sys.id == "card" %}
+  {% if component.sys.contentType.sys.id == "cardList" %}
+    {% cardList component %}
+  {% elsif component.sys.contentType.sys.id == "card" %}
     {% card component %}
   {% endif %}
 {% endfor %}
