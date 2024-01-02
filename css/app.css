@@ -7379,12 +7379,27 @@ p {
   margin-left: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .card .card-content {
-    height: 350px;
+    height: 290px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .card .card-content {
+    height: 440px;
+  }
+}
+@media screen and (min-width: 850px) {
+  .card .card-content {
+    height: 420px;
   }
 }
 @media screen and (min-width: 1024px) {
+  .card .card-content {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1216px) {
   .card .card-content {
     height: 280px;
   }
