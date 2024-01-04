@@ -1,7 +1,5 @@
-name: Eleventy Build on Publish
-on:
-  repository_dispatch:
-    types: [publish-event]
+name: Eleventy Manual Build
+on: [workflow_dispatch]
 
 env:
   CTFL_SPACE: ${{ secrets.CTFL_SPACE }}
