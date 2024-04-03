@@ -7381,7 +7381,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .card .card-content {
-    height: 290px;
+    height: auto;
   }
 }
 @media screen and (min-width: 769px) {
