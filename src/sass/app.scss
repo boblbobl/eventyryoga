@@ -62,7 +62,7 @@ $wide-desktop-breakpoint: 1216px;
 
 .card .card-content {
     @include until($mobile-breakpoint) {
-        height: 290px;
+        height: auto;
     }
     @include from($tablet-breakpoint) {
         height: 440px;
